@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+      <link rel="stylesheet" href="css/main.css">
+      <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        .navbar, .navbar-light, .navbar-expand-lg, .navbar-nav, .form-control {
+            background-color: black;
+            color: white;
+        }
+        .navbar-light .navbar-nav .nav-link {
+            color: white !important;
+        }
+        .navbar-light .navbar-toggler-icon {
+            background-color: white;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #dca21b !important;
+            background-color: black;
+            border-radius: 4px; 
+        }
+        .accordion .card-header {
+            background-color: black;
+            color: white;
+        }
+        .accordion .card-header .btn-link {
+            color: white;
+            text-align: left;
+            font-size: 18px;
+            width: 100%;
+            padding: 15px;
+        }
+        .accordion .card-header .btn-link:hover {
+            color: #da9930;
+            text-decoration: none;
+        }
+        .accordion .card-body {
+            background-color: black;
+            color: white;
+            font-size: 16px;
+            padding: 20px;
+        }
+        .accordion .card .collapse.show {
+            background-color: #444;
+        }
+      </style>
+      <title>Bee Population Analysis - Loss and Renovation</title>
+   </head>
+   <body>
+    <nav class="navbar navbar-expand-lg bg-light navbar-light">
+       <a class="navbar-brand" href="./index.html">Bee Population Analysis</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-body" aria-controls="navbar-body" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+       <div class="collapse navbar-collapse" id="navbar-body">
+          <ul class="navbar-nav mr-auto">
+             <li class="nav-item"><a class="nav-link" href="./geo-trends.html">Geographic Trends</a></li>
+             <li class="nav-item"><a class="nav-link" href="./mitigating-loss.html">Loss and Renovation</a></li>
+              </div>
+             </li>
+          </ul>
+       </div>
+    </nav>
+   <body>
+   <body>
+      <div class="jumbotron jumbotron-fluid" style="color: #dca21b;">
+         <div class="container">
+            <h1 class="display-4">Loss and Renovation</h1>
+            <p class="lead">In order to mitigate loss, it is crucial to explore the causes behind population decline and the efficacy of various methods to grow and preserve dying populations. See below for more information.</p>
+         </div>
+      </div>
+      <div class="container" id="bsr-wrapper">
+         <div class='my-5'></div>
+         <h1>Losses Per Year</h1>
+         <p>DATA CONTEXT: As previously mentioned, the dataset detailed the percent colony loss for each state, in each quarter, of each year from 2015 to 2022. To determine which year had the highest percent loss on average, we no longer divided the data by state and instead only grouped it by year. Doing so allowed us to determine an average value of percent loss for each year.
+        </p>
+         <p>VISUAL INSIGHTS: This graph depicts the average percent of colonies lost per year from 2015 to 2022. A slight peak occurs in 2018, with an average of 12.39% of bee colonies lost nationally for that year across all states represented. 2021 experienced the lowest average percent of colonies lost that year, at 10.11%. This minimum and maximum in the bar chart created a range of 2.28%. As bee colony loss is damaging and substantial, the tabs below may help to identify ways in which beekeepers can combat this loss nationwide.</p>
+         <embed src="./avg_percentlost_per_year_bar (1).html"
+        type="text/html" height="700" width="1000" />
+         <h1>Identifying and Fixing the Issue</h1>
+         <p>The information as described in the tabs below may assist in the identification and fixing of causes that lead to bee colony loss. Causes such as mites, diseases and pesticides are explained while the method of renovation is presented to arrive at a potential solution.</p>
+         <div class="accordion" id="accordion17278479">
+            <div class="card">
+               <div class="card-header" id="header-0">
+                  <h2 class="mb-0"><button class="btn btn-link w-100 h-100 text-left" type="button" data-toggle="collapse" data-target="#panel82219320" aria-expanded="false" aria-controls="header-0">Top Causes</button></h2>
+               </div>
+               <div id="panel82219320" class="collapse" aria-labelledby="headingOne" data-parent="#accordion17278479">
+                <div class="card-body">DATA CONTEXT: Within our data, 4 separate columns titled top causes of colony loss. The numbers within these columns identified the amount of colonies impacted by the given causes. In order to compare these causes’ impact on colonies, we transformed the data by “melting” it, or converting these columns from wide to long. Doing so created a single column with 4 different possible values (each of the 4 causes) and a single column with the percent of colonies that were impacted by that cause in that specific state, quarter, and year. Doing this allowed us to compare the 4 causes and determine which ones had the greatest impact on average.
+                    </div>
+                  <div class="card-body">VISUAL INSIGHTS: This line graph takes a closer look into the progression of percent of colonies impacted by each of the top 4 causes of loss.
+                    Mites dominated from 2015 to 2022, consistently impacting the highest percentage of overall colonies by a long shot.
+                    Pests and Parasites, Pesticides, and Diseases impacted the 2nd, 3rd, and 4th highest percent of colonies, respectively. No one cause overtook another during this time frame. Mites, Pests and Parasites, and Pesticides all peaked in percent of colonies impacted in the year 2018. In this year, over one-third of all colonies were impacted by Mites (34.86%). This goes hand-in-hand with the "Average Percent of Colonies Lost per Year" visual - which shows that the greatest percent of overall colonies were lost in 2018, at 12.39%.
+                    </div>
+                  <embed src="./causes_line_comparison.html"
+        type="text/html" height="700" width="1000" />
+                <div class="card-body">DATA CONTEXT: Using the transformed data mentioned previously, we utilized the year variable to create a time series. Rather than looking at the overall average impact that each cause had between 2015 and 2022, we looked at the progression of the percent of colonies impacted by each cause with a line graph. One of the pitfalls of our data is that these 4 causes are likely not the only things that have impacted colony loss, as the dataset fails to take into account other anticipated factors such as weather.                    
+                </div>
+                <div class="card-body">VISUAL INSIGHTS: This pie chart depicts the percent of total colonies impacted by each of the 4 top causes of colony loss.
+                    Of all colonies impacted by these top 4 causes, 59.6% are impacted by Mites on average, dominating over the other causes.
+                    Of all colonies impacted by these causes, Pests and Parasites come second place to Mites, being responsible for 21.7% of the impacted colonies on average.
+                    Of all colonies in general (impacted by these causes or not), Mites impact 29.89% on average (the greatest amount). Diseases appear to impact the smallest amount of overall colonies in general, impacting 3.35% on average.
+                    </div>
+                  <embed src="./causes_pie_chart.html"
+        type="text/html" height="700" width="1000" />
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="header-1">
+                  <h2 class="mb-0"><button class="btn btn-link w-100 h-100 text-left" type="button" data-toggle="collapse" data-target="#panel4565877" aria-expanded="false" aria-controls="header-1">Colony Renovation</button></h2>
+               </div>
+               <div id="panel4565877" class="collapse" aria-labelledby="headingOne" data-parent="#accordion17278479">
+                <div class="card-body">DATA CONTEXT: Colony renovation, as described by our dataset via information from the United States Department of Agriculture, includes a process called “requeening” in which a bee colony receives a new queen bee into their colony to bolster its livelihood and production. This method of renovation can help to combat bee colony loss. We were able to condense the data given over 32 quarters (four quarters per year from 2015-2022) and find the average percent of renovated colonies per state. This data was then visualized in a choropleth and animated to become the visual representation below. 
+                </div>
+                  <div class="card-body">VISUAL INSIGHTS: According to the graph, Georgia has been a top colony renovator in recent years, with 14.75%, 15.75%, and 24.25% of colonies renovated in 2020, 2021, and 2022 respectively. California experienced a spike in renovation practices from 2019 to 2020, jumping from 7.67% to 10.75% of colonies renovated. Furthermore, renovation may have an inverse relationship with percent of colonies lost. For instance, Louisiana had the greatest percent of colonies renovated in 2019, with 20.33% (more than any other state). In the following year, 2020, Louisiana had the second lowest percent of colonies lost out of any state (5.25% lost - see “Percent of Colonies Lost per State”), indicating that renovation may help mitigate colony loss.
+                </div>
+                  <embed src="./renovated_map (6).html"
+        type="text/html" height="700" width="1000" />
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script><script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script><script src="js/main.js"></script>
+   </body>
+</html>
